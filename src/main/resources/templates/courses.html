@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse all courses on the Online Learning Platform." />
+  <title>Online Learning Platform — Courses</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="/">LearnHub</a>
+      <button class="btn btn-secondary menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-links">Menu</button>
+      <ul class="nav-links" id="primary-links" data-nav-links>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/my-courses">My Courses <span class="nav-badge" data-enrollment-count hidden></span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" id="main-content">
+    <h1>Course listing</h1>
+    <form class="form-row" role="search" aria-label="Filter courses" onsubmit="return false;">
+      <div>
+        <label for="category-filter">Category</label><br />
+        <select id="category-filter" data-category-filter>
+          <option value="">All categories</option>
+        </select>
+      </div>
+      <div>
+        <label for="course-search">Search</label><br />
+        <input type="search" id="course-search" data-course-search placeholder="Search title, instructor…" autocomplete="off" />
+      </div>
+      <div>
+        <label for="duration-filter">Duration</label><br />
+        <select id="duration-filter" data-duration-filter>
+          <option value="">Any duration</option>
+          <option value="short">Under 8 hours</option>
+          <option value="medium">8 to 12 hours</option>
+          <option value="long">Over 12 hours</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort-order">Sort by</label><br />
+        <select id="sort-order" data-sort>
+          <option value="featured">Featured order</option>
+          <option value="title-az">Title A–Z</option>
+          <option value="title-za">Title Z–A</option>
+          <option value="duration-asc">Duration: shortest first</option>
+          <option value="duration-desc">Duration: longest first</option>
+        </select>
+      </div>
+    </form>
+
+    <p class="result-count" data-result-count role="status"></p>
+    <div class="grid" data-course-grid>
+      <p class="status" role="status">Loading courses…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/my-courses">My Courses <span class="nav-badge" data-enrollment-count hidden></span></a></li>
+        </ul>
+      </nav>
+      <p>© <span data-current-year>2026</span> LearnHub · Online Learning Platform</p>
+    </div>
+  </footer>
+
+  <script src="/js/api.js" defer></script>
+  <script src="/js/storage.js" defer></script>
+  <script src="/js/app.js" defer></script>
+  <script src="/js/courses.js" defer></script>
+</body>
+</html>

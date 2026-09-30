@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Online Learning Platform — discover featured courses and start learning." />
+  <title>Online Learning Platform — Home</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="/">LearnHub</a>
+      <button class="btn btn-secondary menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-links">Menu</button>
+      <ul class="nav-links" id="primary-links" data-nav-links>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/my-courses">My Courses <span class="nav-badge" data-enrollment-count hidden></span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Learn new skills online, at your own pace</h1>
+      <p>Hands-on courses in programming, web development, databases and design — with lessons, instructors and progress saved right in your browser.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="/courses">Browse all courses</a>
+        <a class="btn btn-secondary" href="/my-courses">Go to My Courses</a>
+      </div>
+    </section>
+
+    <section class="stats-band" aria-labelledby="stats-heading">
+      <h2 id="stats-heading">LearnHub at a glance</h2>
+      <ul class="stats" data-stats>
+        <li class="status" role="status">Loading platform statistics…</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured courses</h2>
+      <div class="grid" data-featured-courses>
+        <p class="status" role="status">Loading featured courses…</p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Ready to start learning?</h2>
+      <p>Enroll in seconds — no account needed, your progress stays in your browser.</p>
+      <a class="btn btn-light" href="/courses">Find your course</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/my-courses">My Courses <span class="nav-badge" data-enrollment-count hidden></span></a></li>
+        </ul>
+      </nav>
+      <p>© <span data-current-year>2026</span> LearnHub · Online Learning Platform</p>
+    </div>
+  </footer>
+
+  <script src="/js/api.js" defer></script>
+  <script src="/js/storage.js" defer></script>
+  <script src="/js/app.js" defer></script>
+  <script src="/js/home.js" defer></script>
+</body>
+</html>

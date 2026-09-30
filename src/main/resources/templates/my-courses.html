@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your enrolled courses and learning progress." />
+  <title>Online Learning Platform — My Courses</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="/">LearnHub</a>
+      <button class="btn btn-secondary menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-links">Menu</button>
+      <ul class="nav-links" id="primary-links" data-nav-links>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/my-courses">My Courses <span class="nav-badge" data-enrollment-count hidden></span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" id="main-content">
+    <h1>My Courses</h1>
+    <p>Courses you enroll in are stored in your browser with LocalStorage. Mark lessons complete on the course page to track your progress.</p>
+    <div class="grid" data-my-courses>
+      <p class="status" role="status">Loading your courses…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/my-courses">My Courses <span class="nav-badge" data-enrollment-count hidden></span></a></li>
+        </ul>
+      </nav>
+      <p>© <span data-current-year>2026</span> LearnHub · Online Learning Platform</p>
+    </div>
+  </footer>
+
+  <script src="/js/api.js" defer></script>
+  <script src="/js/storage.js" defer></script>
+  <script src="/js/app.js" defer></script>
+  <script src="/js/my-courses.js" defer></script>
+</body>
+</html>
